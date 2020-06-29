@@ -1,7 +1,7 @@
 console.log('User side js file loaded')
 
 const getWeatherInfo= (city,callback)=>{
-fetch('http://localhost:3000/weather?address='+city).then((response)=>{
+fetch('/weather?address='+city).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             callback(data.error, undefined)

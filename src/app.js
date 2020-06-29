@@ -9,6 +9,7 @@ const app = express();
 const homePath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
+const port = process.env.PORT || 3000
 
 //set up handlebar config
 app.set('view engine','hbs')
@@ -70,6 +71,6 @@ app.get('*',(req,res)=>{
         name : 'Shekhar'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server is up.')
+app.listen(port,()=>{
+    console.log('Server is up on port : '+port)
 })
