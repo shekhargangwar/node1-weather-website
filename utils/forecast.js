@@ -11,6 +11,7 @@ const getforecast =(latitude,longitude,callback)=>{
             callback(response.body.error.info,undefined)
         }
         else{
+            console.log(response.body)
         callback(undefined,response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degree out. It feels like '+response.body.current.feelslike+' out.')
         }
     })
