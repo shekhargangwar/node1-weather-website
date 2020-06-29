@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit',(e)=>{
     msg1.textContent = 'Loading...'
 e.preventDefault()
 if(!search.value){
-    alert('Please enter city name')
+    msg1.textContent = "Please enter city name."
 }
 else{
     getWeatherInfo(search.value,(error,data)=>{
